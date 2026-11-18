@@ -11,7 +11,7 @@ prediction = model.predict(new_student_data)
 probability = model.predict_proba(new_student_data)
 
 print("=== New Student Prediction ===")
-print("Prediction:", "FAIL (High Risk)" if prediction[0] == 1 else "PASS")
+print("Prediction:", "FAIL (At-risk candidate)" if prediction[0] == 1 else "PASS")
 print("Probability of Failing:", round(probability[0][1], 3))
 
 # Reproducibility Verification
